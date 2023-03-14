@@ -3,17 +3,20 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BuiltInThemes } from "@uni-design-system/uni-core";
 import { ThemeProvider } from "@uni-design-system/uni-react";
+import { BrowserRouter } from "react-router-dom";
+import { LightTheme, DarkTheme } from "./themes";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <ThemeProvider themeId="LightTheme" themes={BuiltInThemes}>
-      <App />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider themeId="LightTheme" themes={{ LightTheme, DarkTheme }}>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
