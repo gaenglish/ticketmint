@@ -2336,10 +2336,10 @@
   resolved "https://registry.npmjs.org/@uni-design-system/uni-react-icons/-/uni-react-icons-0.1.1.tgz"
   integrity sha512-4dHWeN/QOKyM+/qU511XZIcC0v09zeEd/KZqD8iGB4IOFptv4jykjULbcqg0cn5Wv8F49fVZhuEe95RjNHTHJw==
 
-"@uni-design-system/uni-react@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@uni-design-system/uni-react/-/uni-react-0.0.6.tgz#5b99a0ec4955f6c93bf130152ec70a9b312d1161"
-  integrity sha512-utYKbLnXI5k7uKXFRQgUtcbvXLZXX/1Ahj+3nlEctklIrxnnqnoDYYcQcPrlcgVYCmw0AoQudjAo7jjefLTYEQ==
+"@uni-design-system/uni-react@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@uni-design-system/uni-react/-/uni-react-0.0.8.tgz#07302a9c1826a17812d114a3945c1c4b23158a5e"
+  integrity sha512-eleTQ9y4f4MdJ4vVAKvUBB4I3ulCujgk3CQHDLk2wojX3aZq1LayABbpC6+uUPkjry4wDfHRKsvupYln9FCGtA==
   dependencies:
     "@dnd-kit/core" "^6.0.7"
     "@dnd-kit/modifiers" "^6.0.1"
