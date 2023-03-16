@@ -1,17 +1,19 @@
-import React, { PropsWithChildren, ReactNode, useState } from "react";
-import { Link, To, useMatch, useResolvedPath } from "react-router-dom";
+import React, { PropsWithChildren, useState } from "react";
+import { To, useMatch, useNavigate, useResolvedPath } from "react-router-dom";
+import { Button, IconName } from "@uni-design-system/uni-react";
 
 interface NavItemProps {
   to?: To;
-  icon: ReactNode;
+  iconName?: IconName;
 }
 
 export const NavItem = ({
   to,
-  icon,
+  iconName,
   children,
 }: PropsWithChildren<NavItemProps>) => {
   const resolvedPath = useResolvedPath(to || "/");
+  const navigate = useNavigate();
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
   const [open, setOpen] = useState(false);
@@ -19,13 +21,17 @@ export const NavItem = ({
   return (
     <li className="nav-item">
       {to ? (
-        <Link to={to} className="icon-button">
-          {icon}
-        </Link>
+        <Button
+          buttonType="icon"
+          iconName={iconName}
+          onClick={() => navigate(to)}
+        />
       ) : (
-        <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
-          {icon}
-        </a>
+        <Button
+          buttonType="icon"
+          iconName={iconName}
+          onClick={() => setOpen(!open)}
+        />
       )}
 
       {open && children}

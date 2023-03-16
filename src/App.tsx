@@ -1,5 +1,4 @@
 import "./index.css";
-import { Icon, useTheme } from "@uni-design-system/uni-react";
 
 import React from "react";
 import { Navbar, NavItem } from "./components/navigation";
@@ -7,22 +6,16 @@ import { DropdownMenu } from "./components/navigation/DropdownMenu";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
-import Logo from "./assets/logo";
 
 const App = () => {
-  const { colors } = useTheme();
-
   return (
     <>
       <Navbar>
-        <NavItem
-          to="/wallet"
-          icon={<Icon color="on-surface" name="wallet" />}
-        />
-        <NavItem to="/alerts" icon={<Icon name="bell" />} />
-        <NavItem to="/chat" icon={<Icon name="chatBubbleLeftRight" />} />
+        <NavItem to="/wallet" iconName="wallet" />
+        <NavItem to="/alerts" iconName="bell" />
+        <NavItem to="/chat" iconName="chatBubbleLeftRight" />
 
-        <NavItem icon={<Icon name="chevronDown" />}>
+        <NavItem iconName="chevronDown">
           <DropdownMenu></DropdownMenu>
         </NavItem>
       </Navbar>
